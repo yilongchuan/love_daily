@@ -2,7 +2,7 @@ name: Daily Love Message
 
 on:
   schedule:
-    - cron: '30 0 * * *'  # 每天8:30 (UTC+8)运行1
+    - cron: '30 0 * * *'  # 每天8:30 (UTC+8)运行
   workflow_dispatch:  # 支持手动触发
 
 jobs:
