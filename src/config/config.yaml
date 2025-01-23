@@ -34,3 +34,11 @@ weather:
     girl:
       city: "青岛"
       district: "市北"
+
+email:
+  smtp_server: smtp.qq.com  # 改为QQ邮箱的SMTP服务器
+  smtp_port: 465
+  sender: 528373190@qq.com  # 你的QQ邮箱
+  password: xotjguzvbilsbiia  # 刚才获取的授权码
+  receivers:
+    - 1358395292@qq.com
