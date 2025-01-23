@@ -1,0 +1,7 @@
+# 忽略实际配置文件
+src/config/config.yaml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class 

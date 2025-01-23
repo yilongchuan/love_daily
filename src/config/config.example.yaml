@@ -1,8 +1,7 @@
 basic:
-  webhook_url: "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=b2262b7b-3237-4650-8461-4549d02a917b"
-  send_time: "19:11"  # 每天早上8:30发送
+  send_time: "19:11"
 personal:
-  anniversary: "2024-10-04"  # 阳历日期
+  anniversary: "2024-10-04"
   anniversary_wishes: [
     "今天是我们在一起的第{count}个周年纪念日，愿我们的爱情永远像第一天一样美好 💑",
     "和你在一起的第{count}年，每一天都是最好的礼物 ❤️",
@@ -10,8 +9,8 @@ personal:
   ]
   birthdays:
     boy:
-      type: "lunar"         # lunar表示农历，solar表示阳历
-      date: "1996-11-06"    # 改回原来的日期
+      type: "lunar"
+      date: "1996-11-06"
       wishes: [
         "愿你的生日充满阳光和欢笑，就像你给我的生活带来的温暖一样",
         "生日快乐！愿你的每一天都像生日一样特别",
@@ -26,7 +25,7 @@ personal:
         "今天是你的生日，也是我祝福你的日子"
       ]
 weather:
-  key: "f363480b8c684e1d993949ec80e779d2"
+  key: ${WEATHER_API_KEY}
   locations:
     boy:
       city: "上海"
@@ -38,8 +37,7 @@ weather:
 email:
   smtp_server: smtp.qq.com
   smtp_port: 465
-  sender: 528373190@qq.com
-  password: xotjguzvbilsbiia  # 使用实际的授权码
+  sender: ${EMAIL_SENDER}
+  password: ${EMAIL_PASSWORD}
   receivers:
-    - 1358395292@qq.com
-    # - other@example.com  # 可以添加多个收件人
+    - ${EMAIL_RECEIVER} 

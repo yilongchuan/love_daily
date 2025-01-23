@@ -8,10 +8,25 @@ from utils.date_util import (get_love_days, get_birthday_countdown, format_date,
 from utils.weather_util import WeatherUtil
 from utils.sweet_words_util import SweetWordsUtil
 from utils.email_util import EmailUtil
+import os
 
 def load_config():
     with open('./src/config/config.yaml', 'r', encoding='utf-8') as f:
-        return yaml.safe_load(f)
+        config = yaml.safe_load(f)
+    
+    # 从环境变量加载敏感信息
+    if 'EMAIL_PASSWORD' in os.environ:
+        config['email']['password'] = os.environ['EMAIL_PASSWORD']
+    if 'EMAIL_SENDER' in os.environ:
+        config['email']['sender'] = os.environ['EMAIL_SENDER']
+    if 'EMAIL_RECEIVER' in os.environ:
+        # 将逗号分隔的邮箱字符串转换为列表
+        receivers = [email.strip() for email in os.environ['EMAIL_RECEIVER'].split(',')]
+        config['email']['receivers'] = receivers
+    if 'WEATHER_API_KEY' in os.environ:
+        config['weather']['key'] = os.environ['WEATHER_API_KEY']
+    
+    return config
 
 def send_message(content: str, subject_content: str = None) -> bool:
     """发送邮件消息"""
