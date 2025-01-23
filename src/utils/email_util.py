@@ -38,7 +38,7 @@ class EmailUtil:
             try:
                 msg = MIMEMultipart()
                 # 使用Header正确编码发件人名称
-                sender_name = Header('每日问候', 'utf-8').encode()
+                sender_name = Header('EG', 'utf-8').encode()
                 msg['From'] = f'{sender_name} <{self.sender}>'
                 msg['To'] = ','.join(self.receivers)
                 
