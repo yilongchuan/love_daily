@@ -106,7 +106,7 @@ def job():
         # 构建消息内容
         content = f"""
         <div style="line-height: 1.6;">
-            <h2 style="color: #333;">🌅 早安呀！今天是我们在一起的第 {love_days} 天啦 💑</h2>
+            <h2 style="color: #333;">🌅 今天是我们在一起的第 {love_days} 天啦 💑</h2>
             
             <p style="font-size: 16px;">📅 今天是 {format_date()}</p>
             
