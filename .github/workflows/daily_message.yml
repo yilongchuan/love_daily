@@ -22,6 +22,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     
+    - name: Wait for 6 minutes if scheduled
+      if: github.event_name == 'schedule'  # 只在定时触发时执行
+      run: sleep 360  # 等待6分钟 (6 * 60 = 360秒)
+    
     - name: Run script
       env:
         EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
