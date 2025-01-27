@@ -29,11 +29,11 @@ weather:
   key: "f363480b8c684e1d993949ec80e779d2"
   locations:
     boy:
-      city: "上海"
-      district: "闵行"
+      city: "潍坊"
+      district: "高密"
     girl:
-      city: "青岛"
-      district: "市北"
+      city: "周口"
+      district: "商水"
 
 email:
   smtp_server: smtp.qq.com

@@ -28,11 +28,11 @@ weather:
   key: ${WEATHER_API_KEY}
   locations:
     boy:
-      city: "上海"
-      district: "闵行"
+      city: "潍坊"
+      district: "高密"
     girl:
-      city: "青岛"
-      district: "市北"
+      city: "周口"
+      district: "商水"
 
 email:
   smtp_server: smtp.qq.com
