@@ -44,7 +44,7 @@ class EmailUtil:
                 
                 # 设置邮件主题
                 if subject_content:
-                    subject = f"早安宝贝！"
+                    subject = f"早安亲爱的！"
                 else:
                     subject = f"今日问候 - {time.strftime('%Y-%m-%d')}"
                 
