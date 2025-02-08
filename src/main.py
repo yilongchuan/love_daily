@@ -72,9 +72,9 @@ def job():
         if boy_warning_text or girl_warning_text:
             warning_message = "\n⚠️ 天气预警提醒 ⚠️"
             if girl_warning_text:
-                warning_message += f"\n商水：\n{girl_warning_text}"
+                warning_message += f"\n青岛：\n{girl_warning_text}"
             if boy_warning_text:
-                warning_message += f"\n高密：\n{boy_warning_text}"
+                warning_message += f"\n上海：\n{boy_warning_text}"
             warning_message += "\n请注意防护，注意安全！❤️"
         
         # 获取日期相关信息
@@ -112,8 +112,8 @@ def job():
             
             <div style="background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 15px 0;">
                 <h3 style="color: #333;">🌈 今日天气小贴士：</h3>
-                <p>🏙️ 商水：{weather_util.format_weather(girl_weather)}</p>
-                <p>🌆 高密：{weather_util.format_weather(boy_weather)}</p>
+                <p>🏙️ 青岛：{weather_util.format_weather(girl_weather)}</p>
+                <p>🌆 上海：{weather_util.format_weather(boy_weather)}</p>
                 {warning_message}
             </div>
             
